@@ -34,9 +34,10 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,19 +53,19 @@ class _MyHomePageState extends State<MyHomePage> {
               const SizedBox(height: 50),
               const Text('Continue as'),
               const SizedBox(height: 20,),
-              const MyButton(text: "User GDSC"),
+              const MyButton(text: "User GDG"),
               const SizedBox(height: 50,),
               const Text("Login to another account"),
               const SizedBox(height: 20),
               TextField(
                 controller: controller,
                 decoration: InputDecoration(
-                  hintText: "Email address or phone number",
+                  hintText: "Email address or ",
                   enabledBorder: OutlineInputBorder(
                     borderSide: const BorderSide(color: Colors.transparent, ),
                     borderRadius: BorderRadius.circular(50),
                   ),
-                  fillColor: Colors.grey.shade300,
+                  fillColor: Colors.cyan,
                   filled: true,
                 ),
               ),
